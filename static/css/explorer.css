@@ -1,0 +1,115 @@
+
+.tag-success {
+    padding: 0.2em 0.6em;
+    font-size: 0.75em;
+    background-color: #ffb300;
+    color: white;
+    border-radius: 8px;
+    font-weight: bold;
+    margin: 0.2em;
+    display: inline-block;
+}
+
+.tag-failure {
+    padding: 0.2em 0.6em;
+    font-size: 0.75em;
+    background-color: black;
+    color: white;
+    border-radius: 8px;
+    font-weight: bold;
+    margin: 0.2em;
+    display: inline-block;
+}
+
+.tag-abstract {
+    padding: 0.2em 0.6em;
+    font-size: 0.75em;
+    background-color: #17a2b8;
+    color: white;
+    border-radius: 8px;
+    font-weight: bold;
+    margin: 0.2em;
+    display: inline-block;
+}
+.tag-verbose {
+    padding: 0.2em 0.6em;
+    font-size: 0.75em;
+    background-color: #28a745;
+    color: white;
+    border-radius: 8px;
+    font-weight: bold;
+    margin: 0.2em;
+    display: inline-block;
+}
+.tag-account {
+    padding: 0.2em 0.6em;
+    font-size: 0.75em;
+    background-color: #dc3545;
+    color: white;
+    border-radius: 8px;
+    font-weight: bold;
+    margin: 0.2em;
+    display: inline-block;
+}
+.tag-cli {
+    padding: 0.2em 0.6em;
+    font-size: 0.75em;
+    background-color: #806038
+    ;
+    color: white;
+    border-radius: 8px;
+    font-weight: bold;
+    margin: 0.2em;
+    display: inline-block;
+}
+.tag-gui {
+    padding: 0.2em 0.6em;
+    font-size: 0.75em;
+    background-color: #6c757d;
+    color: white;
+    border-radius: 8px;
+    font-weight: bold;
+    margin: 0.2em;
+    display: inline-block;
+
+}
+.tag-cli-gui {
+    padding: 0.2em 0.6em;
+    font-size: 0.75em;
+    background-color: #007bff;
+    color: white;
+    border-radius: 8px;
+    font-weight: bold;
+    margin: 0.2em;
+    display: inline-block;
+}
+.tag-easy {
+    padding: 0.2em 0.6em;
+    font-size: 0.75em;
+    background-color: #6610f2;
+    color: white;
+    border-radius: 8px;
+    font-weight: bold;
+    margin: 0.2em;
+    display: inline-block;
+}
+.tag-medium {
+    padding: 0.2em 0.6em;
+    font-size: 0.75em;
+    background-color: #fd7e14;
+    color: white;
+    border-radius: 8px;
+    font-weight: bold;
+    margin: 0.2em;
+    display: inline-block;
+}
+.tag-hard {
+    padding: 0.2em 0.6em;
+    font-size: 0.75em;
+    background-color: #e83e8c;
+    color: white;
+    border-radius: 8px;
+    font-weight: bold;
+    margin: 0.2em;
+    display: inline-block;
+}
