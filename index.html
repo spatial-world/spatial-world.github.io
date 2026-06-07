@@ -42,20 +42,20 @@
               <span class="author-block"><a href="https://scholar.google.com/citations?hl=zh-CN&amp;user=_gNt3W8AAAAJ" target="_blank" rel="noopener noreferrer">Hailong Qu</a><sup>*2</sup>,</span>
               <span class="author-block"><a href="https://scholar.google.com/citations?hl=zh-CN&amp;user=V3bIsMIAAAAJ" target="_blank" rel="noopener noreferrer">Jingyi Tang</a><sup>3</sup>,</span>
               <span class="author-block"><a href="https://scholar.google.com/citations?hl=zh-CN&amp;user=1BCpC9IAAAAJ" target="_blank" rel="noopener noreferrer">Jiahao Wang</a><sup>5</sup>,</span>
-              <span class="author-block">Zihao Huang<sup>6</sup>,</span>
+              <span class="author-block"><a href="#" target="_self">Zihao Huang</a><sup>6</sup>,</span>
               <span class="author-block"><a href="https://github.com/Wood-Q" target="_blank" rel="noopener noreferrer">Hengkang Qiao</a><sup>2</sup>,</span>
               <br>
               <span class="author-block"><a href="https://scholar.google.co.jp/citations?hl=en&amp;user=rgc2eikAAAAJ" target="_blank" rel="noopener noreferrer">Shihong Huang</a><sup>3</sup>,</span>
               <span class="author-block"><a href="https://junming-yang.github.io/" target="_blank" rel="noopener noreferrer">Junming Yang</a><sup>7</sup>,</span>
-              <span class="author-block">Yi Li<sup>1</sup>,</span>
-              <span class="author-block">Hongyixuan Yuan<sup>2</sup>,</span>
+              <span class="author-block"><a href="#" target="_self">Yi Li</a><sup>1</sup>,</span>
+              <span class="author-block"><a href="#" target="_self">Hongyixuan Yuan</a><sup>2</sup>,</span>
               <br>
-              <span class="author-block">Wenjie Li<sup>8</sup>,</span>
+              <span class="author-block"><a href="#" target="_self">Wenjie Li</a><sup>8</sup>,</span>
               <span class="author-block"><a href="https://scholar.google.com/citations?hl=zh-CN&amp;user=MHo_d3YAAAAJ" target="_blank" rel="noopener noreferrer">Bohan Zeng</a><sup>3</sup>,</span>
               <span class="author-block"><a href="https://fenglinglwb.github.io/" target="_blank" rel="noopener noreferrer">Wenbo Li</a><sup>9</sup>,</span>
-              <span class="author-block">Bo Wang<sup>6</sup>,</span>
+              <span class="author-block"><a href="#" target="_self">Bo Wang</a><sup>6</sup>,</span>
               <span class="author-block"><a href="https://sites.google.com/view/jianhuiliu/home" target="_blank" rel="noopener noreferrer">Jianhui Liu</a><sup>10</sup>,</span>
-              <span class="author-block">Zhiqi Huang<sup>3</sup>,</span>
+              <span class="author-block"><a href="#" target="_self">Zhiqi Huang</a><sup>3</sup>,</span>
               <br>
               <span class="author-block"><a href="https://hhyhhyhy.github.io/" target="_blank" rel="noopener noreferrer">Haoyang Huang</a><sup>9</sup>,</span>
               <span class="author-block"><a href="https://zwt233.github.io/" target="_blank" rel="noopener noreferrer">Wentao Zhang</a><sup>3</sup>,</span>
@@ -179,10 +179,15 @@
         </p>
       </div>
       <figure class="has-text-centered" id="framework-figure">
-        <img src="imgs/spatialworld_main.png" alt="SpatialWorld Framework Overview" class="teaser-image"
-          onerror="this.parentElement.style.display='none'">
+        <img src="imgs/spatialworld_main.png" alt="SpatialWorld Framework Overview" class="teaser-image" loading="lazy">
         <figcaption class="is-size-7 has-text-grey" style="margin-top: 10px;">
           SpatialWorld unifies eight 3D simulation backends under a shared closed-loop evaluation protocol.
+        </figcaption>
+      </figure>
+      <figure class="has-text-centered framework-secondary-figure">
+        <img src="imgs/action_space.png" alt="Unified text-based action space across simulation backends" class="teaser-image" loading="lazy">
+        <figcaption class="is-size-7 has-text-grey" style="margin-top: 10px;">
+          A unified text-based action space enables cross-platform evaluation under vision-only partial observability.
         </figcaption>
       </figure>
     </div>
@@ -194,34 +199,42 @@
       <h2 class="title is-3 has-text-centered">Eight Simulation Backends</h2>
       <div class="env-grid">
         <div class="env-card">
+          <img src="imgs/envs/ai2thor.png" alt="AI2-THOR first-person view" class="env-card-thumb" loading="lazy">
           <h4>🏠 AI2-THOR</h4>
           <p>Near-photorealistic indoor scenes with rich object affordances for household manipulation. <strong>311 tasks</strong></p>
         </div>
         <div class="env-card">
+          <img src="imgs/envs/ai2thor_overview.png" alt="ProcTHOR procedural indoor layout" class="env-card-thumb" loading="lazy">
           <h4>🏗️ ProcTHOR</h4>
           <p>Procedurally generated indoor layouts testing generalization across diverse room configurations. <strong>127 tasks</strong></p>
         </div>
         <div class="env-card">
+          <img src="imgs/envs/virtualhome.png" alt="VirtualHome scene" class="env-card-thumb" loading="lazy">
           <h4>🛋️ VirtualHome</h4>
           <p>Daily activity scripts in home environments with multi-step routines. <strong>38 tasks</strong></p>
         </div>
         <div class="env-card">
+          <img src="imgs/envs/carla.png" alt="CARLA urban driving scene" class="env-card-thumb" loading="lazy">
           <h4>🚗 CARLA</h4>
           <p>Urban traffic simulation for outdoor navigation and travel-oriented tasks. <strong>80 tasks</strong></p>
         </div>
         <div class="env-card">
+          <img src="imgs/envs/carla_overview.png" alt="EmbodiedCity urban overview" class="env-card-thumb" loading="lazy">
           <h4>🌆 EmbodiedCity</h4>
           <p>Large-scale city navigation with realistic pedestrian and vehicle dynamics. <strong>53 tasks</strong></p>
         </div>
         <div class="env-card">
+          <img src="imgs/envs/multi_social.png" alt="Multi-agent social collaboration" class="env-card-thumb" loading="lazy">
           <h4>👥 Multi-AI2THOR</h4>
           <p>Multi-agent social collaboration in shared indoor environments. <strong>29 tasks</strong></p>
         </div>
         <div class="env-card">
+          <img src="imgs/envs/ai2thor_overview.png" alt="Multi-ProcTHOR coordination scene" class="env-card-thumb" loading="lazy">
           <h4>👥 Multi-ProcTHOR</h4>
           <p>Coordinated multi-agent tasks in procedurally generated scenes. <strong>17 tasks</strong></p>
         </div>
         <div class="env-card">
+          <img src="imgs/envs/games.png" alt="3D digital game environments" class="env-card-thumb" loading="lazy">
           <h4>🎮 3D Games</h4>
           <p>Lightweight digital environments (Block 3D, Maze 3D, Snake, Rubik's Cube) for abstract spatial reasoning. <strong>105 tasks</strong></p>
         </div>
@@ -266,7 +279,9 @@
       <div class="gallery-panel" data-panel="daily">
         <div class="task-gallery">
           <div class="task-card">
-            <div class="task-card-visual" style="background: linear-gradient(135deg, #0f766e, #14b8a6);">AI2-THOR</div>
+            <div class="task-card-visual">
+              <img src="imgs/envs/ai2thor.png" alt="AI2-THOR daily task scene" loading="lazy">
+            </div>
             <div class="task-card-body">
               <div class="task-card-env">AI2-THOR · Daily</div>
               <div class="task-card-instruction">"I found the lettuce was rotten; please help me throw it in the trash."</div>
@@ -277,7 +292,9 @@
             </div>
           </div>
           <div class="task-card">
-            <div class="task-card-visual" style="background: linear-gradient(135deg, #0369a1, #38bdf8);">ProcTHOR</div>
+            <div class="task-card-visual">
+              <img src="imgs/envs/ai2thor_overview.png" alt="ProcTHOR daily task scene" loading="lazy">
+            </div>
             <div class="task-card-body">
               <div class="task-card-env">ProcTHOR · Daily</div>
               <div class="task-card-instruction">"Please put the dirty plate into the dishwasher and close it."</div>
@@ -288,7 +305,9 @@
             </div>
           </div>
           <div class="task-card">
-            <div class="task-card-visual" style="background: linear-gradient(135deg, #7c3aed, #a78bfa);">VirtualHome</div>
+            <div class="task-card-visual">
+              <img src="imgs/envs/virtualhome.png" alt="VirtualHome daily task scene" loading="lazy">
+            </div>
             <div class="task-card-body">
               <div class="task-card-env">VirtualHome · Daily</div>
               <div class="task-card-instruction">"I need to tidy up the kitchen. Please open the refrigerator door and put the salmon inside, but do not close the refrigerator door."</div>
@@ -304,7 +323,9 @@
       <div class="gallery-panel" data-panel="travel" style="display:none;">
         <div class="task-gallery">
           <div class="task-card">
-            <div class="task-card-visual" style="background: linear-gradient(135deg, #b45309, #fbbf24);">CARLA</div>
+            <div class="task-card-visual">
+              <img src="imgs/envs/carla.png" alt="CARLA travel task scene" loading="lazy">
+            </div>
             <div class="task-card-body">
               <div class="task-card-env">CARLA · Travel</div>
               <div class="task-card-instruction">"Walk to the position marked by the red line in the screenshot. You can turn and move in any direction."</div>
@@ -315,7 +336,9 @@
             </div>
           </div>
           <div class="task-card">
-            <div class="task-card-visual" style="background: linear-gradient(135deg, #1e40af, #60a5fa);">EmbodiedCity</div>
+            <div class="task-card-visual">
+              <img src="imgs/envs/carla_overview.png" alt="EmbodiedCity travel task scene" loading="lazy">
+            </div>
             <div class="task-card-body">
               <div class="task-card-env">EmbodiedCity · Travel</div>
               <div class="task-card-instruction">"Navigate to the bus stop at the end of the street and wait there."</div>
@@ -331,7 +354,9 @@
       <div class="gallery-panel" data-panel="work" style="display:none;">
         <div class="task-gallery">
           <div class="task-card">
-            <div class="task-card-visual" style="background: linear-gradient(135deg, #0f766e, #2dd4bf);">AI2-THOR</div>
+            <div class="task-card-visual">
+              <img src="imgs/envs/ai2thor_overview.png" alt="AI2-THOR work and study scene" loading="lazy">
+            </div>
             <div class="task-card-body">
               <div class="task-card-env">AI2-THOR · Work &amp; Study</div>
               <div class="task-card-instruction">"Please organize the documents on the desk and place the laptop in the drawer."</div>
@@ -342,7 +367,9 @@
             </div>
           </div>
           <div class="task-card">
-            <div class="task-card-visual" style="background: linear-gradient(135deg, #4338ca, #818cf8);">ProcTHOR</div>
+            <div class="task-card-visual">
+              <img src="imgs/envs/ai2thor.png" alt="ProcTHOR work and study scene" loading="lazy">
+            </div>
             <div class="task-card-body">
               <div class="task-card-env">ProcTHOR · Work &amp; Study</div>
               <div class="task-card-instruction">"Find the whiteboard marker and place it on the conference table."</div>
@@ -358,7 +385,9 @@
       <div class="gallery-panel" data-panel="social" style="display:none;">
         <div class="task-gallery">
           <div class="task-card">
-            <div class="task-card-visual" style="background: linear-gradient(135deg, #be185d, #f472b6);">Multi-AI2THOR</div>
+            <div class="task-card-visual">
+              <img src="imgs/envs/multi_social.png" alt="Multi-AI2THOR social collaboration scene" loading="lazy">
+            </div>
             <div class="task-card-body">
               <div class="task-card-env">Multi-AI2THOR · Social Collaboration</div>
               <div class="task-card-instruction">"Work with your partner to set the dining table: you handle the plates while they handle the utensils."</div>
@@ -369,7 +398,9 @@
             </div>
           </div>
           <div class="task-card">
-            <div class="task-card-visual" style="background: linear-gradient(135deg, #9333ea, #c084fc);">Multi-ProcTHOR</div>
+            <div class="task-card-visual">
+              <img src="imgs/envs/virtualhome_overview.png" alt="Multi-ProcTHOR social collaboration scene" loading="lazy">
+            </div>
             <div class="task-card-body">
               <div class="task-card-env">Multi-ProcTHOR · Social Collaboration</div>
               <div class="task-card-instruction">"Coordinate with the other agent to move the heavy box to the storage room together."</div>
@@ -385,7 +416,9 @@
       <div class="gallery-panel" data-panel="digital" style="display:none;">
         <div class="task-gallery">
           <div class="task-card">
-            <div class="task-card-visual" style="background: linear-gradient(135deg, #059669, #34d399);">Maze 3D</div>
+            <div class="task-card-visual">
+              <img src="imgs/envs/games.png" alt="Maze 3D digital game scene" loading="lazy">
+            </div>
             <div class="task-card-body">
               <div class="task-card-env">3D Games · Digital</div>
               <div class="task-card-instruction">"Navigate through the 3D maze from the green start point to the red exit."</div>
@@ -396,7 +429,9 @@
             </div>
           </div>
           <div class="task-card">
-            <div class="task-card-visual" style="background: linear-gradient(135deg, #dc2626, #f87171);">Rubik's Cube</div>
+            <div class="task-card-visual">
+              <img src="imgs/envs/games.png" alt="Rubik's Cube digital game scene" loading="lazy">
+            </div>
             <div class="task-card-body">
               <div class="task-card-env">3D Games · Digital</div>
               <div class="task-card-instruction">"Rotate the faces to solve the Rubik's cube and match all sides."</div>
@@ -407,7 +442,9 @@
             </div>
           </div>
           <div class="task-card">
-            <div class="task-card-visual" style="background: linear-gradient(135deg, #ca8a04, #fde047);">Snake 3D</div>
+            <div class="task-card-visual">
+              <img src="imgs/envs/games.png" alt="Snake 3D digital game scene" loading="lazy">
+            </div>
             <div class="task-card-body">
               <div class="task-card-env">3D Games · Digital</div>
               <div class="task-card-instruction">"Control the snake to eat the food without hitting the walls or itself."</div>
