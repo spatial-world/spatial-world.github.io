@@ -316,15 +316,6 @@ body {
   vertical-align: top;
 }
 
-.main-experiment-figure {
-  margin: 28px auto 8px;
-  max-width: 900px;
-}
-
-.main-experiment-figure .figure-media {
-  max-height: none;
-}
-
 .figure-slide figcaption {
   margin-top: 10px;
   text-align: center;
@@ -365,6 +356,12 @@ body {
   padding: 16px 20px 20px;
 }
 
+.collapsible-content--figure {
+  display: flex;
+  justify-content: center;
+  padding: 16px 20px 20px;
+}
+
 .collapsible-subsection {
   margin-top: 12px;
   border: 1px solid #e2e8f0;
@@ -391,6 +388,14 @@ body {
   border-radius: 8px;
   border: 1px solid #e2e8f0;
   background: #f8fafc;
+  max-width: 520px;
+  width: 100%;
+}
+
+.figure-img--compact {
+  max-width: 520px;
+  width: 100%;
+  margin: 0 auto;
 }
 
 .publication-authors a[target="_self"] {
