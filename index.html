@@ -187,24 +187,39 @@
           define success conditions, and validate trajectories through automated execution checks and human review.
         </p>
       </div>
-      <figure class="has-text-centered" id="framework-figure">
-        <img src="imgs/spatialworld_main.png" alt="SpatialWorld framework overview" class="teaser-image" loading="lazy">
-        <figcaption class="is-size-7 has-text-grey" style="margin-top: 10px;">
-          SpatialWorld unifies eight 3D simulation backends under a shared closed-loop evaluation protocol.
-        </figcaption>
-      </figure>
-      <figure class="has-text-centered framework-secondary-figure">
-        <img src="imgs/pipeline_data.png" alt="SpatialWorld data construction pipeline" class="teaser-image" loading="lazy">
-        <figcaption class="is-size-7 has-text-grey" style="margin-top: 10px;">
-          Data construction pipeline across all environments: annotation, success-condition definition, and human validation.
-        </figcaption>
-      </figure>
-      <figure class="has-text-centered framework-secondary-figure">
-        <img src="imgs/action_space.png" alt="Unified text-based action space" class="teaser-image" loading="lazy">
-        <figcaption class="is-size-7 has-text-grey" style="margin-top: 10px;">
-          A unified text-based action space shared across heterogeneous simulation backends.
-        </figcaption>
-      </figure>
+      <p class="figure-carousel-hint has-text-centered is-size-7">← 左右滑动查看配图 →</p>
+      <div class="figure-carousel" tabindex="0">
+        <figure class="figure-slide">
+          <div class="figure-media">
+            <object data="imgs/figures/spatialworld_main.pdf" type="application/pdf" class="figure-pdf">
+              <img src="imgs/figures/spatialworld_main.png" alt="SpatialWorld framework overview" class="figure-img" loading="lazy">
+            </object>
+          </div>
+          <figcaption class="is-size-7 has-text-grey">
+            SpatialWorld unifies eight 3D simulation backends under a shared closed-loop evaluation protocol.
+          </figcaption>
+        </figure>
+        <figure class="figure-slide">
+          <div class="figure-media">
+            <object data="imgs/figures/pipeline_data.pdf" type="application/pdf" class="figure-pdf">
+              <img src="imgs/figures/pipeline_data.png" alt="SpatialWorld data construction pipeline" class="figure-img" loading="lazy">
+            </object>
+          </div>
+          <figcaption class="is-size-7 has-text-grey">
+            Data construction pipeline: annotation, success-condition definition, and human validation.
+          </figcaption>
+        </figure>
+        <figure class="figure-slide">
+          <div class="figure-media">
+            <object data="imgs/figures/action_space.pdf" type="application/pdf" class="figure-pdf">
+              <img src="imgs/figures/action_space.png" alt="Unified text-based action space" class="figure-img" loading="lazy">
+            </object>
+          </div>
+          <figcaption class="is-size-7 has-text-grey">
+            A unified text-based action space shared across heterogeneous simulation backends.
+          </figcaption>
+        </figure>
+      </div>
     </div>
   </section>
 
@@ -286,6 +301,7 @@
       <div class="gallery-panel" data-panel="daily">
         <div class="task-gallery">
           <div class="task-card">
+            <div class="task-card-visual" style="background: linear-gradient(135deg, #0f766e, #14b8a6);">AI2-THOR</div>
             <div class="task-card-body">
               <div class="task-card-env">AI2-THOR · Daily</div>
               <div class="task-card-instruction">"I found the lettuce was rotten; please help me throw it in the trash."</div>
@@ -296,6 +312,7 @@
             </div>
           </div>
           <div class="task-card">
+            <div class="task-card-visual" style="background: linear-gradient(135deg, #0369a1, #38bdf8);">ProcTHOR</div>
             <div class="task-card-body">
               <div class="task-card-env">ProcTHOR · Daily</div>
               <div class="task-card-instruction">"Please put the dirty plate into the dishwasher and close it."</div>
@@ -306,6 +323,7 @@
             </div>
           </div>
           <div class="task-card">
+            <div class="task-card-visual" style="background: linear-gradient(135deg, #7c3aed, #a78bfa);">VirtualHome</div>
             <div class="task-card-body">
               <div class="task-card-env">VirtualHome · Daily</div>
               <div class="task-card-instruction">"I need to tidy up the kitchen. Please open the refrigerator door and put the salmon inside, but do not close the refrigerator door."</div>
@@ -321,6 +339,7 @@
       <div class="gallery-panel" data-panel="travel" style="display:none;">
         <div class="task-gallery">
           <div class="task-card">
+            <div class="task-card-visual" style="background: linear-gradient(135deg, #b45309, #fbbf24);">CARLA</div>
             <div class="task-card-body">
               <div class="task-card-env">CARLA · Travel</div>
               <div class="task-card-instruction">"Walk to the position marked by the red line in the screenshot. You can turn and move in any direction."</div>
@@ -331,6 +350,7 @@
             </div>
           </div>
           <div class="task-card">
+            <div class="task-card-visual" style="background: linear-gradient(135deg, #1e40af, #60a5fa);">EmbodiedCity</div>
             <div class="task-card-body">
               <div class="task-card-env">EmbodiedCity · Travel</div>
               <div class="task-card-instruction">"Navigate to the bus stop at the end of the street and wait there."</div>
@@ -346,6 +366,7 @@
       <div class="gallery-panel" data-panel="work" style="display:none;">
         <div class="task-gallery">
           <div class="task-card">
+            <div class="task-card-visual" style="background: linear-gradient(135deg, #0f766e, #2dd4bf);">AI2-THOR</div>
             <div class="task-card-body">
               <div class="task-card-env">AI2-THOR · Work &amp; Study</div>
               <div class="task-card-instruction">"Please organize the documents on the desk and place the laptop in the drawer."</div>
@@ -356,6 +377,7 @@
             </div>
           </div>
           <div class="task-card">
+            <div class="task-card-visual" style="background: linear-gradient(135deg, #4338ca, #818cf8);">ProcTHOR</div>
             <div class="task-card-body">
               <div class="task-card-env">ProcTHOR · Work &amp; Study</div>
               <div class="task-card-instruction">"Find the whiteboard marker and place it on the conference table."</div>
@@ -371,6 +393,7 @@
       <div class="gallery-panel" data-panel="social" style="display:none;">
         <div class="task-gallery">
           <div class="task-card">
+            <div class="task-card-visual" style="background: linear-gradient(135deg, #be185d, #f472b6);">Multi-AI2THOR</div>
             <div class="task-card-body">
               <div class="task-card-env">Multi-AI2THOR · Social Collaboration</div>
               <div class="task-card-instruction">"Work with your partner to set the dining table: you handle the plates while they handle the utensils."</div>
@@ -381,6 +404,7 @@
             </div>
           </div>
           <div class="task-card">
+            <div class="task-card-visual" style="background: linear-gradient(135deg, #9333ea, #c084fc);">Multi-ProcTHOR</div>
             <div class="task-card-body">
               <div class="task-card-env">Multi-ProcTHOR · Social Collaboration</div>
               <div class="task-card-instruction">"Coordinate with the other agent to move the heavy box to the storage room together."</div>
@@ -396,6 +420,7 @@
       <div class="gallery-panel" data-panel="digital" style="display:none;">
         <div class="task-gallery">
           <div class="task-card">
+            <div class="task-card-visual" style="background: linear-gradient(135deg, #059669, #34d399);">Maze 3D</div>
             <div class="task-card-body">
               <div class="task-card-env">3D Games · Digital</div>
               <div class="task-card-instruction">"Navigate through the 3D maze from the green start point to the red exit."</div>
@@ -406,6 +431,7 @@
             </div>
           </div>
           <div class="task-card">
+            <div class="task-card-visual" style="background: linear-gradient(135deg, #dc2626, #f87171);">Rubik's Cube</div>
             <div class="task-card-body">
               <div class="task-card-env">3D Games · Digital</div>
               <div class="task-card-instruction">"Rotate the faces to solve the Rubik's cube and match all sides."</div>
@@ -416,6 +442,7 @@
             </div>
           </div>
           <div class="task-card">
+            <div class="task-card-visual" style="background: linear-gradient(135deg, #ca8a04, #fde047);">Snake 3D</div>
             <div class="task-card-body">
               <div class="task-card-env">3D Games · Digital</div>
               <div class="task-card-instruction">"Control the snake to eat the food without hitting the walls or itself."</div>
@@ -430,10 +457,58 @@
     </div>
   </section>
 
-  <!-- Scenario Distribution -->
+  <!-- Experimental Results -->
   <section class="section" style="padding-top: 0;">
-    <div class="container is-max-desktop">
-      <h2 class="title is-3 has-text-centered">Scenario Distribution</h2>
+    <div class="container is-max-widescreen">
+      <h2 class="title is-3 has-text-centered">Experimental Results</h2>
+
+      <h3 class="title is-4 has-text-centered" style="margin-top: 24px;">Main Results — Task Success Rate (TSR %)</h3>
+      <p class="has-text-centered is-size-6" style="color:#64748b; margin-bottom: 16px;">
+        Performance across physical scenario categories and digital 3D games. Bold = best, underline = second-best per column.
+      </p>
+      <div class="performance-table-wrapper">
+        <table class="performance-table">
+          <thead>
+            <tr>
+              <th rowspan="2" style="vertical-align:middle;">Model</th>
+              <th colspan="6">Physical</th>
+              <th>Digital</th>
+            </tr>
+            <tr>
+              <th>Daily</th>
+              <th>Work</th>
+              <th>Entertain.</th>
+              <th>Travel</th>
+              <th>Social</th>
+              <th>Overall</th>
+              <th>Entertain.</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="group-header"><td colspan="8">(A) Open-Source Models</td></tr>
+            <tr><td>Qwen2.5-VL-72B</td><td>3.8</td><td>8.5</td><td>3.0</td><td>1.1</td><td>2.2</td><td>3.7</td><td>7.6</td></tr>
+            <tr><td>Qwen3-VL-30B-A3B</td><td>5.3</td><td>5.1</td><td>4.5</td><td>1.1</td><td>4.3</td><td>4.1</td><td>7.9</td></tr>
+            <tr><td>Qwen3-VL-235B-Instruct</td><td>6.9</td><td>8.5</td><td>7.4</td><td>4.5</td><td>10.9</td><td>7.6</td><td>5.0</td></tr>
+            <tr><td>Qwen3-VL-235B-Thinking</td><td>5.7</td><td>8.5</td><td>7.4</td><td>3.8</td><td>10.9</td><td>7.3</td><td>28.3</td></tr>
+            <tr><td>Qwen-3.5-397B-A17B</td><td class="second">13.1</td><td class="best">16.9</td><td class="best">13.2</td><td>4.5</td><td class="second">19.6</td><td class="second">13.5</td><td>26.0</td></tr>
+            <tr><td>GLM-4.5V</td><td>3.6</td><td>3.4</td><td>4.5</td><td>2.2</td><td>13.0</td><td>5.3</td><td>14.5</td></tr>
+            <tr><td>GLM-4.6V</td><td>2.9</td><td>5.1</td><td>4.4</td><td>1.5</td><td>0.0</td><td>2.8</td><td>8.1</td></tr>
+            <tr><td>Kimi-VL-A3B</td><td>1.1</td><td>3.4</td><td>0.0</td><td>0.0</td><td>0.0</td><td>0.9</td><td>3.3</td></tr>
+            <tr><td>Kimi-K2.5</td><td>11.1</td><td>8.5</td><td>4.4</td><td>3.8</td><td>17.4</td><td>9.0</td><td>31.0</td></tr>
+            <tr class="group-header"><td colspan="8">(B) Closed-Source Models</td></tr>
+            <tr><td>Gemini-2.5-Pro</td><td>7.4</td><td class="second">11.9</td><td>1.5</td><td>3.8</td><td>10.9</td><td>7.1</td><td>32.6</td></tr>
+            <tr><td>Gemini-3-Flash</td><td>8.0</td><td>10.2</td><td>4.4</td><td class="second">6.1</td><td>4.3</td><td>6.6</td><td class="second">38.1</td></tr>
+            <tr><td>Gemini-3-Pro</td><td>11.4</td><td>10.2</td><td>5.9</td><td>4.5</td><td>8.7</td><td>8.1</td><td class="best">39.0</td></tr>
+            <tr><td>GPT-5</td><td class="best">14.9</td><td class="best">16.9</td><td class="second">10.3</td><td class="best">6.8</td><td class="best">34.8</td><td class="best">16.7</td><td>36.4</td></tr>
+            <tr><td>GPT-5.4</td><td>8.0</td><td>5.1</td><td>5.9</td><td>3.8</td><td>6.5</td><td>5.9</td><td>11.9</td></tr>
+            <tr><td>Doubao-2.0-Lite</td><td>5.7</td><td>6.8</td><td>5.9</td><td>3.0</td><td>13.0</td><td>6.9</td><td>24.8</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <details class="collapsible-section">
+        <summary>Scenario Distribution (click to expand)</summary>
+        <div class="collapsible-content">
       <div class="performance-table-wrapper">
         <table class="scenario-table" style="width:100%; border-collapse: collapse;">
           <thead>
@@ -487,62 +562,12 @@
           </tbody>
         </table>
       </div>
-    </div>
-  </section>
+        </div>
+      </details>
 
-  <!-- Main Results TSR -->
-  <section class="section" style="padding-top: 0;">
-    <div class="container is-max-widescreen">
-      <h2 class="title is-3 has-text-centered">Main Results — Task Success Rate (TSR %)</h2>
-      <p class="has-text-centered is-size-6" style="color:#64748b; margin-bottom: 16px;">
-        Performance across physical scenario categories and digital 3D games. Bold = best, underline = second-best per column.
-      </p>
-      <div class="performance-table-wrapper">
-        <table class="performance-table">
-          <thead>
-            <tr>
-              <th rowspan="2" style="vertical-align:middle;">Model</th>
-              <th colspan="6">Physical</th>
-              <th>Digital</th>
-            </tr>
-            <tr>
-              <th>Daily</th>
-              <th>Work</th>
-              <th>Entertain.</th>
-              <th>Travel</th>
-              <th>Social</th>
-              <th>Overall</th>
-              <th>Entertain.</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr class="group-header"><td colspan="8">(A) Open-Source Models</td></tr>
-            <tr><td>Qwen2.5-VL-72B</td><td>3.8</td><td>8.5</td><td>3.0</td><td>1.1</td><td>2.2</td><td>3.7</td><td>7.6</td></tr>
-            <tr><td>Qwen3-VL-30B-A3B</td><td>5.3</td><td>5.1</td><td>4.5</td><td>1.1</td><td>4.3</td><td>4.1</td><td>7.9</td></tr>
-            <tr><td>Qwen3-VL-235B-Instruct</td><td>6.9</td><td>8.5</td><td>7.4</td><td>4.5</td><td>10.9</td><td>7.6</td><td>5.0</td></tr>
-            <tr><td>Qwen3-VL-235B-Thinking</td><td>5.7</td><td>8.5</td><td>7.4</td><td>3.8</td><td>10.9</td><td>7.3</td><td>28.3</td></tr>
-            <tr><td>Qwen-3.5-397B-A17B</td><td class="second">13.1</td><td class="best">16.9</td><td class="best">13.2</td><td>4.5</td><td class="second">19.6</td><td class="second">13.5</td><td>26.0</td></tr>
-            <tr><td>GLM-4.5V</td><td>3.6</td><td>3.4</td><td>4.5</td><td>2.2</td><td>13.0</td><td>5.3</td><td>14.5</td></tr>
-            <tr><td>GLM-4.6V</td><td>2.9</td><td>5.1</td><td>4.4</td><td>1.5</td><td>0.0</td><td>2.8</td><td>8.1</td></tr>
-            <tr><td>Kimi-VL-A3B</td><td>1.1</td><td>3.4</td><td>0.0</td><td>0.0</td><td>0.0</td><td>0.9</td><td>3.3</td></tr>
-            <tr><td>Kimi-K2.5</td><td>11.1</td><td>8.5</td><td>4.4</td><td>3.8</td><td>17.4</td><td>9.0</td><td>31.0</td></tr>
-            <tr class="group-header"><td colspan="8">(B) Closed-Source Models</td></tr>
-            <tr><td>Gemini-2.5-Pro</td><td>7.4</td><td class="second">11.9</td><td>1.5</td><td>3.8</td><td>10.9</td><td>7.1</td><td>32.6</td></tr>
-            <tr><td>Gemini-3-Flash</td><td>8.0</td><td>10.2</td><td>4.4</td><td class="second">6.1</td><td>4.3</td><td>6.6</td><td class="second">38.1</td></tr>
-            <tr><td>Gemini-3-Pro</td><td>11.4</td><td>10.2</td><td>5.9</td><td>4.5</td><td>8.7</td><td>8.1</td><td class="best">39.0</td></tr>
-            <tr><td>GPT-5</td><td class="best">14.9</td><td class="best">16.9</td><td class="second">10.3</td><td class="best">6.8</td><td class="best">34.8</td><td class="best">16.7</td><td>36.4</td></tr>
-            <tr><td>GPT-5.4</td><td>8.0</td><td>5.1</td><td>5.9</td><td>3.8</td><td>6.5</td><td>5.9</td><td>11.9</td></tr>
-            <tr><td>Doubao-2.0-Lite</td><td>5.7</td><td>6.8</td><td>5.9</td><td>3.0</td><td>13.0</td><td>6.9</td><td>24.8</td></tr>
-          </tbody>
-        </table>
-      </div>
-    </div>
-  </section>
-
-  <!-- SE Results -->
-  <section class="section" style="padding-top: 0;">
-    <div class="container is-max-widescreen">
-      <h2 class="title is-3 has-text-centered">Step Efficiency (SE)</h2>
+      <details class="collapsible-section">
+        <summary>Step Efficiency (SE) Table (click to expand)</summary>
+        <div class="collapsible-content">
       <p class="has-text-centered is-size-6" style="color:#64748b; margin-bottom: 16px;">
         SE = reference step count / actual step count on successful trajectories. Higher is more efficient.
         "—" indicates no successful trajectory in that category.
@@ -586,6 +611,47 @@
           </tbody>
         </table>
       </div>
+        </div>
+      </details>
+
+      <details class="collapsible-section">
+        <summary>Additional Experimental Figures (click to expand)</summary>
+        <div class="collapsible-content">
+          <details class="collapsible-subsection">
+            <summary>Task distribution across scenarios</summary>
+            <figure class="paper-figure">
+              <object data="imgs/figures/scenario_task_distribution_bar.pdf" type="application/pdf" class="figure-pdf">
+                <img src="imgs/figures/scenario_task_distribution_bar.png" alt="Task distribution across scenarios" class="figure-img" loading="lazy">
+              </object>
+            </figure>
+          </details>
+          <details class="collapsible-subsection">
+            <summary>Indoor vs. outdoor performance (top-5 models)</summary>
+            <figure class="paper-figure">
+              <object data="imgs/figures/main_indoor_outdoor_radar_top5.pdf" type="application/pdf" class="figure-pdf">
+                <img src="imgs/figures/main_indoor_outdoor_radar_top5.png" alt="Indoor vs outdoor radar chart" class="figure-img" loading="lazy">
+              </object>
+            </figure>
+          </details>
+          <details class="collapsible-subsection">
+            <summary>Performance by task complexity (TSR)</summary>
+            <figure class="paper-figure">
+              <object data="imgs/figures/main_complexity_tsr.pdf" type="application/pdf" class="figure-pdf">
+                <img src="imgs/figures/main_complexity_tsr.png" alt="TSR by complexity level" class="figure-img" loading="lazy">
+              </object>
+            </figure>
+          </details>
+          <details class="collapsible-subsection">
+            <summary>Multi-agent social collaboration profile</summary>
+            <figure class="paper-figure">
+              <object data="imgs/figures/main_multi_social_profile.pdf" type="application/pdf" class="figure-pdf">
+                <img src="imgs/figures/main_multi_social_profile.png" alt="Multi-agent social profile" class="figure-img" loading="lazy">
+              </object>
+            </figure>
+          </details>
+        </div>
+      </details>
+
     </div>
   </section>
 
