@@ -362,9 +362,7 @@ body {
 
 .collapsible-content--figure,
 .experiment-figure-block {
-  display: flex;
-  justify-content: center;
-  padding: 8px 20px 20px;
+  padding: 8px 0 20px;
   margin-bottom: 8px;
 }
 
@@ -394,14 +392,7 @@ body {
   border-radius: 8px;
   border: 1px solid #e2e8f0;
   background: #f8fafc;
-  max-width: 520px;
   width: 100%;
-}
-
-.figure-img--compact {
-  max-width: 520px;
-  width: 100%;
-  margin: 0 auto;
 }
 
 .publication-authors a[target="_self"] {
