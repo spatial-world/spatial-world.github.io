@@ -135,8 +135,8 @@
             <p>
               Evaluating 15 advanced agents reveals that robust spatial task solving remains challenging: the strongest
               model, <strong>GPT-5</strong>, achieves an average task success rate (TSR) of only
-              <strong>20.0%</strong>, while the leading open-source model, <strong>Qwen-3.5</strong>, reaches
-              <strong>15.6%</strong>. Further analysis exposes a clear mismatch between task success and execution
+              <strong>17.4%</strong>, while the leading open-source model, <strong>Qwen-3.5</strong>, reaches
+              <strong>14.1%</strong>. Further analysis exposes a clear mismatch between task success and execution
               efficiency, alongside substantial domain-specific performance variations. These bottlenecks in active
               exploration and long-horizon planning position SpatialWorld as a rigorous testbed for future spatial
               agents.
@@ -187,7 +187,7 @@
           define success conditions, and validate trajectories through automated execution checks and human review.
         </p>
       </div>
-      <p class="figure-carousel-hint has-text-centered is-size-7">← Swipe horizontally to view figures →</p>
+      <p class="figure-carousel-hint has-text-centered is-size-7">Scroll vertically to view figures</p>
       <div class="figure-carousel" tabindex="0">
         <figure class="figure-slide">
           <div class="figure-media">
@@ -458,7 +458,7 @@
 
       <h3 class="title is-4 has-text-centered" style="margin-top: 24px;">Main Results — Task Success Rate (TSR %)</h3>
       <p class="has-text-centered is-size-6" style="color:#64748b; margin-bottom: 16px;">
-        Performance across physical scenario categories and digital 3D games. Bold = best, underline = second-best per column.
+        Performance across physical scenario categories and digital 3D games. Bold = best, underline = second-best per column. Physical Overall is the weighted average of Daily, Work, Entertain., Travel, and Social categories.
       </p>
       <div class="performance-table-wrapper">
         <table class="performance-table">
@@ -480,22 +480,22 @@
           </thead>
           <tbody>
             <tr class="group-header"><td colspan="8">(A) Open-Source Models</td></tr>
-            <tr><td>Qwen2.5-VL-72B</td><td>3.8</td><td>8.5</td><td>3.0</td><td>1.1</td><td>2.2</td><td>3.7</td><td>7.6</td></tr>
-            <tr><td>Qwen3-VL-30B-A3B</td><td>5.3</td><td>5.1</td><td>4.5</td><td>1.1</td><td>4.3</td><td>4.1</td><td>7.9</td></tr>
-            <tr><td>Qwen3-VL-235B-Instruct</td><td>6.9</td><td>8.5</td><td>7.4</td><td>4.5</td><td>10.9</td><td>7.6</td><td>5.0</td></tr>
-            <tr><td>Qwen3-VL-235B-Thinking</td><td>5.7</td><td>8.5</td><td>7.4</td><td>3.8</td><td>10.9</td><td>7.3</td><td>28.3</td></tr>
-            <tr><td>Qwen-3.5-397B-A17B</td><td class="second">13.1</td><td class="best">16.9</td><td class="best">13.2</td><td>4.5</td><td class="second">19.6</td><td class="second">13.5</td><td>26.0</td></tr>
-            <tr><td>GLM-4.5V</td><td>3.6</td><td>3.4</td><td>4.5</td><td>2.2</td><td>13.0</td><td>5.3</td><td>14.5</td></tr>
-            <tr><td>GLM-4.6V</td><td>2.9</td><td>5.1</td><td>4.4</td><td>1.5</td><td>0.0</td><td>2.8</td><td>8.1</td></tr>
+            <tr><td>Qwen2.5-VL-72B</td><td>3.7</td><td>8.5</td><td>2.9</td><td>0.8</td><td>2.2</td><td>3.4</td><td>7.6</td></tr>
+            <tr><td>Qwen3-VL-30B-A3B</td><td>6.3</td><td>5.1</td><td>4.4</td><td>1.5</td><td>4.3</td><td>4.9</td><td>7.9</td></tr>
+            <tr><td>Qwen3-VL-235B-Instruct</td><td>6.9</td><td>8.5</td><td>7.4</td><td>4.5</td><td>10.9</td><td>6.9</td><td>5.0</td></tr>
+            <tr><td>Qwen3-VL-235B-Thinking</td><td>5.7</td><td>8.5</td><td>7.4</td><td>3.8</td><td>10.9</td><td>6.1</td><td>28.3</td></tr>
+            <tr><td>Qwen-3.5-397B-A17B</td><td class="second">13.1</td><td class="best">16.9</td><td class="best">13.2</td><td>4.5</td><td class="second">19.6</td><td class="second">12.2</td><td>26.0</td></tr>
+            <tr><td>GLM-4.5V</td><td>3.7</td><td>3.4</td><td>4.4</td><td>1.5</td><td>13.0</td><td>4.0</td><td>14.5</td></tr>
+            <tr><td>GLM-4.6V</td><td>2.9</td><td>5.1</td><td>4.4</td><td>1.5</td><td>0.0</td><td>2.7</td><td>8.1</td></tr>
             <tr><td>Kimi-VL-A3B</td><td>1.1</td><td>3.4</td><td>0.0</td><td>0.0</td><td>0.0</td><td>0.9</td><td>3.3</td></tr>
-            <tr><td>Kimi-K2.5</td><td>11.1</td><td>8.5</td><td>4.4</td><td>3.8</td><td>17.4</td><td>9.0</td><td>31.0</td></tr>
+            <tr><td>Kimi-K2.5</td><td>11.1</td><td>8.5</td><td>4.4</td><td>3.8</td><td>17.4</td><td>9.2</td><td>31.0</td></tr>
             <tr class="group-header"><td colspan="8">(B) Closed-Source Models</td></tr>
-            <tr><td>Gemini-2.5-Pro</td><td>7.4</td><td class="second">11.9</td><td>1.5</td><td>3.8</td><td>10.9</td><td>7.1</td><td>32.6</td></tr>
-            <tr><td>Gemini-3-Flash</td><td>8.0</td><td>10.2</td><td>4.4</td><td class="second">6.1</td><td>4.3</td><td>6.6</td><td class="second">38.1</td></tr>
-            <tr><td>Gemini-3-Pro</td><td>11.4</td><td>10.2</td><td>5.9</td><td>4.5</td><td>8.7</td><td>8.1</td><td class="best">39.0</td></tr>
-            <tr><td>GPT-5</td><td class="best">14.9</td><td class="best">16.9</td><td class="second">10.3</td><td class="best">6.8</td><td class="best">34.8</td><td class="best">16.7</td><td>36.4</td></tr>
-            <tr><td>GPT-5.4</td><td>8.0</td><td>5.1</td><td>5.9</td><td>3.8</td><td>6.5</td><td>5.9</td><td>11.9</td></tr>
-            <tr><td>Doubao-2.0-Lite</td><td>5.7</td><td>6.8</td><td>5.9</td><td>3.0</td><td>13.0</td><td>6.9</td><td>24.8</td></tr>
+            <tr><td>Gemini-2.5-Pro</td><td>7.4</td><td class="second">11.9</td><td>1.5</td><td>3.8</td><td>10.9</td><td>6.7</td><td>32.6</td></tr>
+            <tr><td>Gemini-3-Flash</td><td>8.0</td><td>10.2</td><td>4.4</td><td class="second">6.1</td><td>4.3</td><td>7.2</td><td class="second">38.1</td></tr>
+            <tr><td>Gemini-3.1-Pro</td><td>11.4</td><td>10.2</td><td>5.9</td><td>4.5</td><td>8.7</td><td>9.2</td><td class="best">39.0</td></tr>
+            <tr><td>GPT-5</td><td class="best">14.9</td><td class="best">16.9</td><td class="second">10.3</td><td class="best">6.8</td><td class="best">34.8</td><td class="best">14.4</td><td>36.4</td></tr>
+            <tr><td>GPT-5.4</td><td>8.0</td><td>5.1</td><td>5.9</td><td>3.8</td><td>6.5</td><td>6.6</td><td>11.9</td></tr>
+            <tr><td>Doubao-2.0-Lite</td><td>5.7</td><td>6.8</td><td>5.9</td><td>3.0</td><td>13.0</td><td>5.8</td><td>24.8</td></tr>
           </tbody>
         </table>
       </div>
@@ -564,7 +564,7 @@
         <div class="collapsible-content">
       <p class="has-text-centered is-size-6" style="color:#64748b; margin-bottom: 16px;">
         SE = reference step count / actual step count on successful trajectories. Higher is more efficient.
-        "—" indicates no successful trajectory in that category.
+        Physical Overall is the weighted mean over successful valid physical trajectories. "—" indicates no successful trajectory in that category.
       </p>
       <div class="performance-table-wrapper">
         <table class="performance-table">
@@ -586,22 +586,22 @@
           </thead>
           <tbody>
             <tr class="group-header"><td colspan="8">(A) Open-Source Models</td></tr>
-            <tr><td>Qwen2.5-VL-72B</td><td>0.545</td><td>0.510</td><td>0.458</td><td class="second">0.889</td><td>0.143</td><td>0.509</td><td>0.688</td></tr>
-            <tr><td>Qwen3-VL-30B-A3B</td><td>0.686</td><td class="second">0.667</td><td>0.500</td><td class="best">0.968</td><td>0.174</td><td class="second">0.599</td><td>0.765</td></tr>
-            <tr><td>Qwen3-VL-235B-Instruct</td><td class="second">0.708</td><td>0.574</td><td>0.529</td><td>0.449</td><td>0.243</td><td>0.501</td><td>0.397</td></tr>
-            <tr><td>Qwen3-VL-235B-Thinking</td><td>0.536</td><td>0.453</td><td>0.424</td><td>0.524</td><td>0.218</td><td>0.431</td><td>0.747</td></tr>
-            <tr><td>Qwen-3.5-397B-A17B</td><td>0.552</td><td>0.477</td><td>0.453</td><td>0.633</td><td>0.290</td><td>0.481</td><td>0.737</td></tr>
-            <tr><td>GLM-4.5V</td><td>0.677</td><td>0.583</td><td>0.482</td><td>0.450</td><td>0.270</td><td>0.492</td><td class="second">0.809</td></tr>
-            <tr><td>GLM-4.6V</td><td>0.705</td><td>0.381</td><td>0.444</td><td>0.417</td><td>—</td><td>0.487</td><td>0.920</td></tr>
-            <tr><td>Kimi-VL-A3B</td><td>0.636</td><td>0.333</td><td>—</td><td>—</td><td>—</td><td>0.485</td><td class="best">0.948</td></tr>
-            <tr><td>Kimi-K2.5</td><td>0.519</td><td>0.556</td><td>0.517</td><td>0.553</td><td>0.226</td><td>0.474</td><td>0.626</td></tr>
+            <tr><td>Qwen2.5-VL-72B</td><td>0.545</td><td>0.510</td><td>0.458</td><td class="best">0.889</td><td>0.143</td><td>0.526</td><td>0.688</td></tr>
+            <tr><td>Qwen3-VL-30B-A3B</td><td>0.702</td><td class="second">0.667</td><td>0.500</td><td class="second">0.875</td><td>0.174</td><td class="second">0.658</td><td>0.765</td></tr>
+            <tr><td>Qwen3-VL-235B-Instruct</td><td class="second">0.708</td><td>0.574</td><td>0.529</td><td>0.449</td><td>0.243</td><td>0.587</td><td>0.397</td></tr>
+            <tr><td>Qwen3-VL-235B-Thinking</td><td>0.536</td><td>0.453</td><td>0.424</td><td>0.524</td><td>0.218</td><td>0.471</td><td>0.747</td></tr>
+            <tr><td>Qwen-3.5-397B-A17B</td><td>0.552</td><td>0.477</td><td>0.453</td><td>0.633</td><td>0.290</td><td>0.508</td><td>0.737</td></tr>
+            <tr><td>GLM-4.5V</td><td>0.663</td><td>0.583</td><td>0.482</td><td>0.450</td><td>0.270</td><td>0.529</td><td>0.809</td></tr>
+            <tr><td>GLM-4.6V</td><td>0.705</td><td>0.381</td><td>0.444</td><td>0.417</td><td>—</td><td>0.576</td><td class="second">0.920</td></tr>
+            <tr><td>Kimi-VL-A3B</td><td>0.636</td><td>0.333</td><td>—</td><td>—</td><td>—</td><td>0.535</td><td class="best">0.948</td></tr>
+            <tr><td>Kimi-K2.5</td><td>0.519</td><td>0.556</td><td>0.517</td><td>0.553</td><td>0.226</td><td>0.486</td><td>0.626</td></tr>
             <tr class="group-header"><td colspan="8">(B) Closed-Source Models</td></tr>
-            <tr><td>Gemini-2.5-Pro</td><td>0.615</td><td>0.567</td><td class="best">0.667</td><td>0.483</td><td class="second">0.399</td><td>0.546</td><td>0.518</td></tr>
-            <tr><td>Gemini-3-Flash</td><td>0.575</td><td>0.390</td><td>0.504</td><td>0.612</td><td>0.183</td><td>0.453</td><td>0.657</td></tr>
-            <tr><td>Gemini-3-Pro</td><td class="second">0.708</td><td>0.544</td><td>0.466</td><td>0.732</td><td>0.281</td><td>0.546</td><td>0.717</td></tr>
-            <tr><td>GPT-5</td><td>0.597</td><td>0.540</td><td>0.387</td><td>0.544</td><td>0.248</td><td>0.463</td><td>0.583</td></tr>
-            <tr><td>GPT-5.4</td><td>0.617</td><td class="second">0.667</td><td>0.427</td><td>0.513</td><td>0.305</td><td>0.506</td><td>0.720</td></tr>
-            <tr><td>Doubao-2.0-Lite</td><td class="best">0.776</td><td class="best">0.708</td><td class="second">0.604</td><td class="second">0.708</td><td class="best">0.522</td><td class="best">0.664</td><td>0.599</td></tr>
+            <tr><td>Gemini-2.5-Pro</td><td>0.615</td><td>0.567</td><td class="best">0.667</td><td>0.483</td><td class="second">0.399</td><td>0.569</td><td>0.518</td></tr>
+            <tr><td>Gemini-3-Flash</td><td>0.575</td><td>0.390</td><td>0.504</td><td>0.612</td><td>0.183</td><td>0.536</td><td>0.657</td></tr>
+            <tr><td>Gemini-3.1-Pro</td><td class="second">0.708</td><td>0.544</td><td>0.466</td><td>0.732</td><td>0.281</td><td>0.649</td><td>0.717</td></tr>
+            <tr><td>GPT-5</td><td>0.597</td><td>0.540</td><td>0.387</td><td>0.544</td><td>0.248</td><td>0.511</td><td>0.583</td></tr>
+            <tr><td>GPT-5.4</td><td>0.617</td><td class="second">0.667</td><td>0.427</td><td>0.513</td><td>0.305</td><td>0.569</td><td>0.720</td></tr>
+            <tr><td>Doubao-2.0-Lite</td><td class="best">0.776</td><td class="best">0.708</td><td class="second">0.604</td><td>0.708</td><td class="best">0.522</td><td class="best">0.704</td><td>0.599</td></tr>
           </tbody>
         </table>
       </div>
@@ -633,15 +633,15 @@
       <h2 class="title is-3 has-text-centered">Key Findings</h2>
       <div class="finding-item">
         <strong>Far from reliable 3D task solving.</strong>
-        GPT-5 achieves only 16.7% Physical Overall TSR; Qwen-3.5-397B-A17B reaches 13.5%. Even the strongest models struggle across all scenario categories.
+        GPT-5 achieves only 14.4% Physical Overall TSR; Qwen-3.5-397B-A17B reaches 12.2%. Even the strongest models struggle across all scenario categories.
       </div>
       <div class="finding-item">
         <strong>Success ≠ efficiency.</strong>
-        Models with higher TSR do not necessarily achieve higher step efficiency. Doubao-2.0-Lite leads in SE (0.664 Physical Overall) despite moderate TSR, suggesting many successful trajectories involve redundant exploration.
+        Models with comparable TSR can differ substantially in step efficiency. Kimi-K2.5 and GPT-5.4 have similar Physical Overall TSR (9.2% vs. 6.6%), yet GPT-5.4 achieves higher SE (0.569 vs. 0.486), indicating heavier trial-and-error for Kimi-K2.5.
       </div>
       <div class="finding-item">
         <strong>Domain-specific strengths.</strong>
-        GPT-5 leads daily household and social collaboration; Qwen-3.5-397B-A17B ties GPT-5 in Work &amp; Study and leads physical entertainment; Gemini-3-Pro achieves the highest scores on digital 3D games (39.0% TSR).
+        GPT-5 and Qwen-3.5-397B-A17B tie in Work &amp; Study (16.9%); GPT-5 leads Travel (6.8%); Gemini-3.1-Pro achieves the highest scores on digital 3D games (39.0% TSR).
       </div>
       <div class="finding-item">
         <strong>Vision-only closed-loop evaluation.</strong>
