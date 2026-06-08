@@ -274,14 +274,18 @@ body {
   display: flex;
   gap: 20px;
   overflow-x: auto;
+  overflow-y: hidden;
   scroll-snap-type: x mandatory;
   scroll-behavior: smooth;
   padding: 8px 4px 20px;
   -webkit-overflow-scrolling: touch;
+  scrollbar-width: thin;
+  scrollbar-color: #cbd5e1 transparent;
 }
 
 .figure-carousel::-webkit-scrollbar {
   height: 8px;
+  width: 0;
 }
 
 .figure-carousel::-webkit-scrollbar-thumb {
@@ -303,14 +307,22 @@ body {
   box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
 }
 
-.figure-pdf,
 .figure-img,
-.paper-figure .figure-pdf,
 .paper-figure .figure-img {
   display: block;
   width: 100%;
   height: auto;
   border: 0;
+  vertical-align: top;
+}
+
+.main-experiment-figure {
+  margin: 28px auto 8px;
+  max-width: 900px;
+}
+
+.main-experiment-figure .figure-media {
+  max-height: none;
 }
 
 .figure-slide figcaption {
@@ -374,7 +386,11 @@ body {
 
 .paper-figure {
   margin: 0;
-  padding: 12px;
+  padding: 0;
+  overflow: hidden;
+  border-radius: 8px;
+  border: 1px solid #e2e8f0;
+  background: #f8fafc;
 }
 
 .publication-authors a[target="_self"] {

@@ -191,9 +191,7 @@
       <div class="figure-carousel" tabindex="0">
         <figure class="figure-slide">
           <div class="figure-media">
-            <object data="imgs/figures/spatialworld_main.pdf" type="application/pdf" class="figure-pdf">
-              <img src="imgs/figures/spatialworld_main.png" alt="SpatialWorld framework overview" class="figure-img" loading="lazy">
-            </object>
+            <img src="imgs/figures/spatialworld_main.png" alt="SpatialWorld framework overview" class="figure-img" loading="lazy">
           </div>
           <figcaption class="is-size-7 has-text-grey">
             SpatialWorld unifies eight 3D simulation backends under a shared closed-loop evaluation protocol.
@@ -201,9 +199,7 @@
         </figure>
         <figure class="figure-slide">
           <div class="figure-media">
-            <object data="imgs/figures/pipeline_data.pdf" type="application/pdf" class="figure-pdf">
-              <img src="imgs/figures/pipeline_data.png" alt="SpatialWorld data construction pipeline" class="figure-img" loading="lazy">
-            </object>
+            <img src="imgs/figures/pipeline_data.png" alt="SpatialWorld data construction pipeline" class="figure-img" loading="lazy">
           </div>
           <figcaption class="is-size-7 has-text-grey">
             Data construction pipeline: annotation, success-condition definition, and human validation.
@@ -211,9 +207,7 @@
         </figure>
         <figure class="figure-slide">
           <div class="figure-media">
-            <object data="imgs/figures/action_space.pdf" type="application/pdf" class="figure-pdf">
-              <img src="imgs/figures/action_space.png" alt="Unified text-based action space" class="figure-img" loading="lazy">
-            </object>
+            <img src="imgs/figures/action_space.png" alt="Unified text-based action space" class="figure-img" loading="lazy">
           </div>
           <figcaption class="is-size-7 has-text-grey">
             A unified text-based action space shared across heterogeneous simulation backends.
@@ -462,6 +456,15 @@
     <div class="container is-max-widescreen">
       <h2 class="title is-3 has-text-centered">Experimental Results</h2>
 
+      <figure class="main-experiment-figure">
+        <div class="figure-media">
+          <img src="imgs/figures/main_complexity_tsr.png" alt="TSR by task complexity level" class="figure-img" loading="lazy">
+        </div>
+        <figcaption class="has-text-centered is-size-6" style="color:#64748b; margin-top: 12px;">
+          Performance by task complexity (TSR). Navigation, interaction, and hybrid tasks across all evaluated models.
+        </figcaption>
+      </figure>
+
       <h3 class="title is-4 has-text-centered" style="margin-top: 24px;">Main Results — Task Success Rate (TSR %)</h3>
       <p class="has-text-centered is-size-6" style="color:#64748b; margin-bottom: 16px;">
         Performance across physical scenario categories and digital 3D games. Bold = best, underline = second-best per column.
@@ -615,40 +618,29 @@
       </details>
 
       <details class="collapsible-section">
-        <summary>Additional Experimental Figures (click to expand)</summary>
+        <summary>Task Distribution Across Scenarios (click to expand)</summary>
         <div class="collapsible-content">
-          <details class="collapsible-subsection">
-            <summary>Task distribution across scenarios</summary>
-            <figure class="paper-figure">
-              <object data="imgs/figures/scenario_task_distribution_bar.pdf" type="application/pdf" class="figure-pdf">
-                <img src="imgs/figures/scenario_task_distribution_bar.png" alt="Task distribution across scenarios" class="figure-img" loading="lazy">
-              </object>
-            </figure>
-          </details>
-          <details class="collapsible-subsection">
-            <summary>Indoor vs. outdoor performance (top-5 models)</summary>
-            <figure class="paper-figure">
-              <object data="imgs/figures/main_indoor_outdoor_radar_top5.pdf" type="application/pdf" class="figure-pdf">
-                <img src="imgs/figures/main_indoor_outdoor_radar_top5.png" alt="Indoor vs outdoor radar chart" class="figure-img" loading="lazy">
-              </object>
-            </figure>
-          </details>
-          <details class="collapsible-subsection">
-            <summary>Performance by task complexity (TSR)</summary>
-            <figure class="paper-figure">
-              <object data="imgs/figures/main_complexity_tsr.pdf" type="application/pdf" class="figure-pdf">
-                <img src="imgs/figures/main_complexity_tsr.png" alt="TSR by complexity level" class="figure-img" loading="lazy">
-              </object>
-            </figure>
-          </details>
-          <details class="collapsible-subsection">
-            <summary>Multi-agent social collaboration profile</summary>
-            <figure class="paper-figure">
-              <object data="imgs/figures/main_multi_social_profile.pdf" type="application/pdf" class="figure-pdf">
-                <img src="imgs/figures/main_multi_social_profile.png" alt="Multi-agent social profile" class="figure-img" loading="lazy">
-              </object>
-            </figure>
-          </details>
+          <figure class="paper-figure">
+            <img src="imgs/figures/scenario_task_distribution_bar.png" alt="Task distribution across scenarios" class="figure-img" loading="lazy">
+          </figure>
+        </div>
+      </details>
+
+      <details class="collapsible-section">
+        <summary>Indoor vs. Outdoor Performance — Top-5 Models (click to expand)</summary>
+        <div class="collapsible-content">
+          <figure class="paper-figure">
+            <img src="imgs/figures/main_indoor_outdoor_radar_top5.png" alt="Indoor vs outdoor radar chart" class="figure-img" loading="lazy">
+          </figure>
+        </div>
+      </details>
+
+      <details class="collapsible-section">
+        <summary>Multi-Agent Social Collaboration Profile (click to expand)</summary>
+        <div class="collapsible-content">
+          <figure class="paper-figure">
+            <img src="imgs/figures/main_multi_social_profile.png" alt="Multi-agent social profile" class="figure-img" loading="lazy">
+          </figure>
         </div>
       </details>
 
