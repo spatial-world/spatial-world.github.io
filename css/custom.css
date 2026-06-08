@@ -260,6 +260,10 @@ body {
   width: 100%;
 }
 
+.framework-secondary-figure {
+  margin-top: 28px;
+}
+
 .publication-authors a[target="_self"] {
   color: inherit;
   cursor: default;
