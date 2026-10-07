@@ -1,59 +1,28 @@
 # SpatialWorld Project Page
 
-Project website: **https://spatialworld.github.io**
+Live website: https://spatial-world.github.io/
 
-## Local Preview
+This static site presents SpatialWorld's published paper, benchmark,
+annotated task examples, evaluation protocol, reported results, and ablations.
+The result tables and figures follow arXiv v2 (13 June 2026):
+https://arxiv.org/abs/2606.09669v2
 
-```bash
-cd spatialworld
-python3 -m http.server 8080
+## Local preview
+
+```sh
+python -m http.server 8080
 ```
 
-Open: http://localhost:8080/
+Open http://localhost:8080/ from this repository's root.
 
-## Deploy to GitHub Pages
+## Update and publish
 
-This folder is a **standalone** site ready for the `spatialworld.github.io` repository.
+- Edit `index.html` and `css/custom.css`.
+- Place paper figures and task screenshots under `imgs/figures/`.
+- Verify figure sources, table values, links, and responsive layout.
+- Push the reviewed changes to the `main` branch of
+  `https://github.com/spatial-world/spatial-world.github.io.git`.
+- GitHub Pages publishes the repository root. Check the live site after deployment.
 
-### First-time setup
-
-1. On GitHub, create a repository named **`spatialworld.github.io`**
-   - Under the **`spatialworld`** organization (or a user account named `spatialworld`)
-   - Public, no README / no .gitignore
-
-2. Push from this folder:
-
-```bash
-cd spatialworld
-git remote add origin https://github.com/spatialworld/spatialworld.github.io.git
-git push -u origin main
-```
-
-3. In the repo: **Settings → Pages → Build and deployment**
-   - Source: **Deploy from a branch**
-   - Branch: **`main`** / **`/ (root)`**
-
-4. Wait 1–2 minutes, then visit https://spatialworld.github.io
-
-> A commit is already prepared locally on branch `main`. You only need to create the remote repo and push.
-
-## Optional Assets
-
-Add framework figure when available:
-
-```bash
-pdftoppm -png -r 150 ../SpatialWorld_NeurIPS_2026/img/spatialworld_main.pdf imgs/spatialworld_main
-mv imgs/spatialworld_main-1.png imgs/spatialworld_main.png
-git add imgs/spatialworld_main.png && git commit -m "Add framework overview figure" && git push
-```
-
-## Structure
-
-```
-spatialworld/
-├── index.html
-├── css/custom.css
-├── static/          # Bulma, Font Awesome (bundled for GitHub Pages)
-├── imgs/            # Project figures
-└── .nojekyll
-```
+Keep numerical claims tied to their publication or evaluation version.
+The paper's reported results are not a live leaderboard.
