@@ -9,11 +9,6 @@
     content="SpatialWorld, Multimodal Agents, Spatial Reasoning, Embodied AI, 3D Environments, Benchmark">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>SpatialWorld: Benchmarking Interactive Spatial Reasoning of Multimodal Agents</title>
-  <link rel="canonical" href="https://spatial-world.github.io/">
-  <meta property="og:title" content="SpatialWorld: Interactive Spatial Reasoning of Multimodal Agents">
-  <meta property="og:description" content="760 human-annotated tasks across eight simulation backends, with vision-only observations and execution-based evaluation.">
-  <meta property="og:url" content="https://spatial-world.github.io/">
-  <meta property="og:image" content="https://spatial-world.github.io/imgs/figures/spatialworld_main.png">
 
   <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
   <link rel="stylesheet" href="static/css/bulma.min.css">
@@ -113,18 +108,8 @@
     </div>
   </section>
 
-  <nav class="section-nav" aria-label="Page sections">
-    <a href="#overview" target="_self">Overview</a>
-    <a href="#environments" target="_self">Environments</a>
-    <a href="#examples" target="_self">Task examples</a>
-    <a href="#protocol" target="_self">Evaluation</a>
-    <a href="#results" target="_self">Results</a>
-    <a href="#ablations" target="_self">Ablations</a>
-    <a href="#citation" target="_self">Citation</a>
-  </nav>
-
   <!-- Abstract -->
-  <section id="abstract" class="section">
+  <section class="section">
     <div class="container is-max-desktop">
       <div class="columns is-centered">
         <div class="column">
@@ -181,15 +166,15 @@
   </section>
 
   <!-- Framework Overview -->
-  <section id="overview" class="section" style="padding-top: 0;">
+  <section class="section" style="padding-top: 0;">
     <div class="container is-max-desktop">
       <h2 class="title is-3 has-text-centered">Benchmark Overview</h2>
       <div class="content has-text-justified">
         <p>
-          SpatialWorld evaluates how multimodal agents gather visual evidence, plan, act, and verify progress in
-          interactive 3D environments. Eight simulation backends share a text-based action interface, so the same
-          agent can be evaluated across household manipulation, urban and aerial navigation, social collaboration,
-          and digital spatial games.
+          SpatialWorld is a scalable, general-purpose evaluation framework for multimodal agents, supporting
+          end-to-end task solving and structured plan generation. It unifies diverse 3D backends under a standardized
+          observation-action interface, enabling rigorous assessment of interactive spatial reasoning via reproducible
+          benchmarks and automated efficiency metrics.
         </p>
         <p>
           The benchmark wraps eight heterogeneous simulation backends behind a shared closed-loop protocol:
@@ -232,7 +217,7 @@
   </section>
 
   <!-- Eight Environments -->
-  <section id="environments" class="section" style="padding-top: 0;">
+  <section class="section" style="padding-top: 0;">
     <div class="container is-max-desktop">
       <h2 class="title is-3 has-text-centered">Eight Simulation Backends</h2>
       <div class="env-grid">
@@ -254,7 +239,7 @@
         </div>
         <div class="env-card">
           <h4>🌆 EmbodiedCity</h4>
-          <p>Aerial city navigation testing landmark localization, altitude-aware movement, and long-range planning. <strong>53 tasks</strong></p>
+          <p>Large-scale city navigation with realistic pedestrian and vehicle dynamics. <strong>53 tasks</strong></p>
         </div>
         <div class="env-card">
           <h4>👥 Multi-AI2THOR</h4>
@@ -266,23 +251,10 @@
         </div>
         <div class="env-card">
           <h4>🎮 3D Games</h4>
-          <p>Five digital game families (Block3D, Maze, Maze3D, Snake3D, and Rubik's Cube) probing geometry, topology, and state transformations. <strong>105 tasks</strong></p>
+          <p>Lightweight digital environments (Block 3D, Maze 3D, Snake, Rubik's Cube) for abstract spatial reasoning. <strong>105 tasks</strong></p>
         </div>
       </div>
 
-      <details class="collapsible-section">
-        <summary>Task distribution across scenarios</summary>
-        <div class="collapsible-content">
-          <p class="section-note">The benchmark contains 655 physical tasks and 105 digital game tasks.
-            The scenario table below groups physical and digital entertainment together.</p>
-<figure class="analysis-card">
-          <a href="imgs/figures/scenario_task_distribution_bar.png" aria-label="Open full-size Task counts by scenario">
-            <img src="imgs/figures/scenario_task_distribution_bar.png" alt="Task counts by scenario" loading="lazy" decoding="async">
-          </a>
-          <figcaption>Reported scenario distribution from the paper. The complete counts are also available in the results section.</figcaption>
-        </figure>
-        </div>
-      </details>
       <h3 class="title is-4" style="margin-top: 40px;">Complexity Levels</h3>
       <div class="complexity-grid">
         <div class="complexity-card">
@@ -302,82 +274,187 @@
   </section>
 
   <!-- Task Gallery -->
-  <section id="examples" class="section" style="padding-top: 0;">
+  <section class="section" style="padding-top: 0;">
     <div class="container is-max-widescreen">
-      <h2 class="title is-3 has-text-centered">Human-Validated Task Examples</h2>
-      <p class="section-note">Three annotated examples from the paper, with their initial scenes, instructions,
-        and terminal success conditions. Scene overviews are shown here for illustration;
-        the evaluated agent receives only egocentric RGB observations.</p>
-      <div class="task-gallery">
-        <article class="task-card">
-          <div class="task-view-pair">
-            <figure><a href="imgs/figures/figure2_ai2thor_overview.png"><img src="imgs/figures/figure2_ai2thor_overview.png" alt="AI2-THOR annotated scene overview" loading="lazy" decoding="async"></a><figcaption>Scene overview</figcaption></figure>
-            <figure><a href="imgs/figures/figure2_ai2thor_fp.png"><img src="imgs/figures/figure2_ai2thor_fp.png" alt="AI2-THOR initial egocentric observation" loading="lazy" decoding="async"></a><figcaption>Initial agent view</figcaption></figure>
-          </div>
-          <div class="task-card-body">
-            <div class="task-card-env">AI2-THOR · Household manipulation</div>
-            <p class="task-card-instruction">&ldquo;I found the lettuce was rotten; please help me throw it in the trash.&rdquo;</p>
-            <p class="task-success"><strong>Success condition:</strong> The lettuce must be inside a garbage can.</p>
-          </div>
-        </article>
-        <article class="task-card">
-          <div class="task-view-pair">
-            <figure><a href="imgs/figures/figure2_carla_overview.png"><img src="imgs/figures/figure2_carla_overview.png" alt="CARLA annotated scene overview" loading="lazy" decoding="async"></a><figcaption>Scene overview</figcaption></figure>
-            <figure><a href="imgs/figures/figure2_carla_fp.png"><img src="imgs/figures/figure2_carla_fp.png" alt="CARLA initial egocentric observation" loading="lazy" decoding="async"></a><figcaption>Initial agent view</figcaption></figure>
-          </div>
-          <div class="task-card-body">
-            <div class="task-card-env">CARLA · Outdoor navigation</div>
-            <p class="task-card-instruction">&ldquo;Walk to the position marked by the red line in the screenshot. You can turn and move in any direction.&rdquo;</p>
-            <p class="task-success"><strong>Success condition:</strong> The terminal position must satisfy the task's distance-to-waypoint condition.</p>
-          </div>
-        </article>
-        <article class="task-card">
-          <div class="task-view-pair">
-            <figure><a href="imgs/figures/figure2_virtualhome_overview.png"><img src="imgs/figures/figure2_virtualhome_overview.png" alt="VirtualHome annotated scene overview" loading="lazy" decoding="async"></a><figcaption>Scene overview</figcaption></figure>
-            <figure><a href="imgs/figures/figure2_virtualhome_fp.png"><img src="imgs/figures/figure2_virtualhome_fp.png" alt="VirtualHome initial egocentric observation" loading="lazy" decoding="async"></a><figcaption>Initial agent view</figcaption></figure>
-          </div>
-          <div class="task-card-body">
-            <div class="task-card-env">VirtualHome · Ordered household routine</div>
-            <p class="task-card-instruction">&ldquo;I need to tidy up the kitchen. Please open the refrigerator door and put the salmon inside, but do not close the refrigerator door.&rdquo;</p>
-            <p class="task-success"><strong>Success condition:</strong> The salmon must be inside the fridge, and the fridge must remain open.</p>
-          </div>
-        </article>
-      </div>
-      <p class="source-note">Source: annotated execution-based evaluation examples in arXiv v2.</p>
-    </div>
-  </section>
+      <h2 class="title is-3 has-text-centered">Task Examples</h2>
+      <p class="content has-text-centered" style="max-width: 800px; margin: 0 auto 20px; color: #64748b;">
+        Representative tasks from SpatialWorld. Agents receive only a natural-language instruction and egocentric RGB observations.
+      </p>
 
-  <!-- Evaluation Protocol -->
-  <section id="protocol" class="section" style="padding-top: 0;">
-    <div class="container is-max-desktop">
-      <h2 class="title is-3 has-text-centered">How Evaluation Works</h2>
-      <div class="protocol-grid">
-        <article class="protocol-card"><span class="protocol-number">01</span><h3>Observe</h3>
-          <p>The agent receives a task instruction and first-person RGB images. Privileged simulator state is unavailable to the agent.</p></article>
-        <article class="protocol-card"><span class="protocol-number">02</span><h3>Act</h3>
-          <p>Text-based actions cover movement, viewpoint changes, object interaction, and task control. The shared interface maps them to each simulator.</p></article>
-        <article class="protocol-card"><span class="protocol-number">03</span><h3>Verify</h3>
-          <p>A task-specific verifier checks the terminal environment state. Success depends on satisfying the goal, rather than copying a reference trajectory.</p></article>
+      <div class="tabs is-centered gallery-tabs" id="galleryTabs">
+        <ul>
+          <li class="is-active" data-tab="daily"><a>Daily</a></li>
+          <li data-tab="travel"><a>Travel</a></li>
+          <li data-tab="work"><a>Work &amp; Study</a></li>
+          <li data-tab="social"><a>Social</a></li>
+          <li data-tab="digital"><a>Digital Games</a></li>
+        </ul>
       </div>
-      <div class="metric-grid">
-        <article class="metric-card"><h3>Task Success Rate (TSR)</h3>
-          <p>The fraction of tasks that satisfy the terminal goal. Digital games follow the game-specific scoring rules described in the paper.</p></article>
-        <article class="metric-card"><h3>Step Efficiency (SE)</h3>
-          <p>Reference step count divided by the agent's step count, averaged over successful tasks. TSR and SE are reported together to distinguish success from execution efficiency.</p></article>
+
+      <div class="gallery-panel" data-panel="daily">
+        <div class="task-gallery">
+          <div class="task-card">
+            <div class="task-card-visual" style="background: linear-gradient(135deg, #0f766e, #14b8a6);">AI2-THOR</div>
+            <div class="task-card-body">
+              <div class="task-card-env">AI2-THOR · Daily</div>
+              <div class="task-card-instruction">"I found the lettuce was rotten; please help me throw it in the trash."</div>
+              <div class="task-card-meta">
+                <span class="tag interact">Interaction</span>
+                <span class="tag">object_in_receptacle</span>
+              </div>
+            </div>
+          </div>
+          <div class="task-card">
+            <div class="task-card-visual" style="background: linear-gradient(135deg, #0369a1, #38bdf8);">ProcTHOR</div>
+            <div class="task-card-body">
+              <div class="task-card-env">ProcTHOR · Daily</div>
+              <div class="task-card-instruction">"Please put the dirty plate into the dishwasher and close it."</div>
+              <div class="task-card-meta">
+                <span class="tag hybrid">Hybrid</span>
+                <span class="tag">multi-step manipulation</span>
+              </div>
+            </div>
+          </div>
+          <div class="task-card">
+            <div class="task-card-visual" style="background: linear-gradient(135deg, #7c3aed, #a78bfa);">VirtualHome</div>
+            <div class="task-card-body">
+              <div class="task-card-env">VirtualHome · Daily</div>
+              <div class="task-card-instruction">"I need to tidy up the kitchen. Please open the refrigerator door and put the salmon inside, but do not close the refrigerator door."</div>
+              <div class="task-card-meta">
+                <span class="tag hybrid">Hybrid</span>
+                <span class="tag">object_state</span>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
-      <p class="source-note">Evaluation definitions and all results shown below follow the published
-        <a href="https://arxiv.org/abs/2606.09669v2">arXiv v2 paper (13 June 2026)</a>.</p>
+
+      <div class="gallery-panel" data-panel="travel" style="display:none;">
+        <div class="task-gallery">
+          <div class="task-card">
+            <div class="task-card-visual" style="background: linear-gradient(135deg, #b45309, #fbbf24);">CARLA</div>
+            <div class="task-card-body">
+              <div class="task-card-env">CARLA · Travel</div>
+              <div class="task-card-instruction">"Walk to the position marked by the red line in the screenshot. You can turn and move in any direction."</div>
+              <div class="task-card-meta">
+                <span class="tag nav">Navigation</span>
+                <span class="tag">distance_to_waypoint</span>
+              </div>
+            </div>
+          </div>
+          <div class="task-card">
+            <div class="task-card-visual" style="background: linear-gradient(135deg, #1e40af, #60a5fa);">EmbodiedCity</div>
+            <div class="task-card-body">
+              <div class="task-card-env">EmbodiedCity · Travel</div>
+              <div class="task-card-instruction">"Navigate to the bus stop at the end of the street and wait there."</div>
+              <div class="task-card-meta">
+                <span class="tag nav">Navigation</span>
+                <span class="tag">urban navigation</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="gallery-panel" data-panel="work" style="display:none;">
+        <div class="task-gallery">
+          <div class="task-card">
+            <div class="task-card-visual" style="background: linear-gradient(135deg, #0f766e, #2dd4bf);">AI2-THOR</div>
+            <div class="task-card-body">
+              <div class="task-card-env">AI2-THOR · Work &amp; Study</div>
+              <div class="task-card-instruction">"Please organize the documents on the desk and place the laptop in the drawer."</div>
+              <div class="task-card-meta">
+                <span class="tag hybrid">Hybrid</span>
+                <span class="tag">office scene</span>
+              </div>
+            </div>
+          </div>
+          <div class="task-card">
+            <div class="task-card-visual" style="background: linear-gradient(135deg, #4338ca, #818cf8);">ProcTHOR</div>
+            <div class="task-card-body">
+              <div class="task-card-env">ProcTHOR · Work &amp; Study</div>
+              <div class="task-card-instruction">"Find the whiteboard marker and place it on the conference table."</div>
+              <div class="task-card-meta">
+                <span class="tag hybrid">Hybrid</span>
+                <span class="tag">search &amp; place</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="gallery-panel" data-panel="social" style="display:none;">
+        <div class="task-gallery">
+          <div class="task-card">
+            <div class="task-card-visual" style="background: linear-gradient(135deg, #be185d, #f472b6);">Multi-AI2THOR</div>
+            <div class="task-card-body">
+              <div class="task-card-env">Multi-AI2THOR · Social Collaboration</div>
+              <div class="task-card-instruction">"Work with your partner to set the dining table: you handle the plates while they handle the utensils."</div>
+              <div class="task-card-meta">
+                <span class="tag hybrid">Hybrid</span>
+                <span class="tag">multi-agent</span>
+              </div>
+            </div>
+          </div>
+          <div class="task-card">
+            <div class="task-card-visual" style="background: linear-gradient(135deg, #9333ea, #c084fc);">Multi-ProcTHOR</div>
+            <div class="task-card-body">
+              <div class="task-card-env">Multi-ProcTHOR · Social Collaboration</div>
+              <div class="task-card-instruction">"Coordinate with the other agent to move the heavy box to the storage room together."</div>
+              <div class="task-card-meta">
+                <span class="tag hybrid">Hybrid</span>
+                <span class="tag">coordination</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="gallery-panel" data-panel="digital" style="display:none;">
+        <div class="task-gallery">
+          <div class="task-card">
+            <div class="task-card-visual" style="background: linear-gradient(135deg, #059669, #34d399);">Maze 3D</div>
+            <div class="task-card-body">
+              <div class="task-card-env">3D Games · Digital</div>
+              <div class="task-card-instruction">"Navigate through the 3D maze from the green start point to the red exit."</div>
+              <div class="task-card-meta">
+                <span class="tag nav">Navigation</span>
+                <span class="tag">abstract spatial</span>
+              </div>
+            </div>
+          </div>
+          <div class="task-card">
+            <div class="task-card-visual" style="background: linear-gradient(135deg, #dc2626, #f87171);">Rubik's Cube</div>
+            <div class="task-card-body">
+              <div class="task-card-env">3D Games · Digital</div>
+              <div class="task-card-instruction">"Rotate the faces to solve the Rubik's cube and match all sides."</div>
+              <div class="task-card-meta">
+                <span class="tag interact">Interaction</span>
+                <span class="tag">geometric reasoning</span>
+              </div>
+            </div>
+          </div>
+          <div class="task-card">
+            <div class="task-card-visual" style="background: linear-gradient(135deg, #ca8a04, #fde047);">Snake 3D</div>
+            <div class="task-card-body">
+              <div class="task-card-env">3D Games · Digital</div>
+              <div class="task-card-instruction">"Control the snake to eat the food without hitting the walls or itself."</div>
+              <div class="task-card-meta">
+                <span class="tag hybrid">Hybrid</span>
+                <span class="tag">planning</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </section>
 
   <!-- Experimental Results -->
-  <section id="results" class="section" style="padding-top: 0;">
+  <section class="section" style="padding-top: 0;">
     <div class="container is-max-widescreen">
       <h2 class="title is-3 has-text-centered">Experimental Results</h2>
 
-      <p class="section-note">Reported evaluation of 15 multimodal agents on 760 tasks.
-        Physical Overall covers 655 tasks; the digital column covers 105 game tasks.
-        These are the paper's reported results, rather than a continuously updated leaderboard.</p>
       <h3 class="title is-4 has-text-centered" style="margin-top: 24px;">Main Results — Task Success Rate (TSR %)</h3>
       <p class="has-text-centered is-size-6" style="color:#64748b; margin-bottom: 16px;">
         Performance across physical scenario categories and digital 3D games. Bold = best, underline = second-best per column. Physical Overall is the weighted average of Daily, Work, Entertain., Travel, and Social categories.
@@ -530,29 +607,6 @@
         </div>
       </details>
 
-      <h3 class="title is-4 has-text-centered" style="margin-top: 36px;">Task Complexity: Navigation, Interaction, and Both</h3>
-      <p class="section-note">The paper groups physical tasks by their reference action signatures.
-        The figures show task counts, mean success, and mean efficiency for the three modes.</p>
-      <div class="analysis-grid analysis-grid--three">
-<figure class="analysis-card">
-          <a href="imgs/figures/main_complexity_counts.png" aria-label="Open full-size Physical task counts by complexity mode">
-            <img src="imgs/figures/main_complexity_counts.png" alt="Physical task counts by complexity mode" loading="lazy" decoding="async">
-          </a>
-          <figcaption>Task counts by action signature.</figcaption>
-        </figure>
-<figure class="analysis-card">
-          <a href="imgs/figures/main_complexity_tsr.png" aria-label="Open full-size Mean task success rate by complexity mode">
-            <img src="imgs/figures/main_complexity_tsr.png" alt="Mean task success rate by complexity mode" loading="lazy" decoding="async">
-          </a>
-          <figcaption>Mean TSR across the evaluated agents.</figcaption>
-        </figure>
-<figure class="analysis-card">
-          <a href="imgs/figures/main_complexity_se.png" aria-label="Open full-size Mean step efficiency by complexity mode">
-            <img src="imgs/figures/main_complexity_se.png" alt="Mean step efficiency by complexity mode" loading="lazy" decoding="async">
-          </a>
-          <figcaption>Mean SE on successful tasks.</figcaption>
-        </figure>
-      </div>
       <h3 class="title is-4 has-text-centered" style="margin-top: 32px;">Indoor vs. Outdoor Performance — Top-5 Models</h3>
       <div class="experiment-figure-block">
         <figure class="paper-figure">
@@ -565,8 +619,6 @@
         <div class="collapsible-content collapsible-content--figure">
           <figure class="paper-figure">
             <img src="imgs/figures/main_multi_social_profile.png" alt="Multi-agent social profile" class="figure-img" loading="lazy">
-            <figcaption class="figure-caption">Multi-AI2THOR and Multi-ProcTHOR are reported separately;
-              dark markers indicate the pooled social score.</figcaption>
           </figure>
         </div>
       </details>
@@ -574,54 +626,8 @@
     </div>
   </section>
 
-  <!-- Ablation Studies -->
-  <section id="ablations" class="section" style="padding-top: 0;">
-    <div class="container is-max-widescreen">
-      <h2 class="title is-3 has-text-centered">Ablation Studies</h2>
-      <p class="section-note">Additional experiments on the paper's selected task subsets examine inference settings
-        and visual observations. The curves describe those evaluated settings and do not establish a universal optimum.</p>
-      <h3 class="title is-4">Inference Settings</h3>
-      <div class="analysis-grid analysis-grid--three">
-<figure class="analysis-card">
-          <a href="imgs/figures/ablation_temperature_tsr_polished.png" aria-label="Open full-size Temperature ablation">
-            <img src="imgs/figures/ablation_temperature_tsr_polished.png" alt="Temperature ablation" loading="lazy" decoding="async">
-          </a>
-          <figcaption>Sampling temperature: sensitivity varies across the evaluated models.</figcaption>
-        </figure>
-<figure class="analysis-card">
-          <a href="imgs/figures/ablation_window_tsr_polished.png" aria-label="Open full-size Visual history-window ablation">
-            <img src="imgs/figures/ablation_window_tsr_polished.png" alt="Visual history-window ablation" loading="lazy" decoding="async">
-          </a>
-          <figcaption>Visual history: a larger window does not improve every model monotonically.</figcaption>
-        </figure>
-<figure class="analysis-card">
-          <a href="imgs/figures/ablation_continuous_discrete_tsr_polished.png" aria-label="Open full-size Continuous minus discrete action success-rate gap">
-            <img src="imgs/figures/ablation_continuous_discrete_tsr_polished.png" alt="Continuous minus discrete action success-rate gap" loading="lazy" decoding="async">
-          </a>
-          <figcaption>Action parameters: positive values favor continuous actions; negative values favor discrete actions. Values are percentage-point differences.</figcaption>
-        </figure>
-      </div>
-      <h3 class="title is-4" style="margin-top: 28px;">Visual Observation Settings</h3>
-      <div class="analysis-grid analysis-grid--two">
-<figure class="analysis-card">
-          <a href="imgs/figures/ablation_resolution_tsr_polished_seed06.png" aria-label="Open full-size AI2-THOR resolution-scale probe">
-            <img src="imgs/figures/ablation_resolution_tsr_polished_seed06.png" alt="AI2-THOR resolution-scale probe" loading="lazy" decoding="async">
-          </a>
-          <figcaption>Resolution probe on AI2-THOR: the reported curves are locally non-monotonic.</figcaption>
-        </figure>
-<figure class="analysis-card">
-          <a href="imgs/figures/ablation_fov_tsr_polished.png" aria-label="Open full-size AI2-THOR field-of-view probe">
-            <img src="imgs/figures/ablation_fov_tsr_polished.png" alt="AI2-THOR field-of-view probe" loading="lazy" decoding="async">
-          </a>
-          <figcaption>Field-of-view probe on AI2-THOR: wider views generally help in these settings, with varying gains.</figcaption>
-        </figure>
-      </div>
-      <p class="source-note">Figures reproduced from the published paper. Select a figure to view its full-size image.</p>
-    </div>
-  </section>
-
   <!-- Key Findings -->
-  <section id="findings" class="section" style="padding-top: 0;">
+  <section class="section" style="padding-top: 0;">
     <div class="container is-max-desktop">
       <h2 class="title is-3 has-text-centered">Key Findings</h2>
       <div class="finding-item">
@@ -630,11 +636,11 @@
       </div>
       <div class="finding-item">
         <strong>Success ≠ efficiency.</strong>
-        Kimi-K2.5 has a higher Physical Overall TSR than GPT-5.4 (9.2% vs. 6.6%), but a lower SE on successful tasks (0.584 vs. 0.745). The success and efficiency metrics therefore rank these models differently.
+        Models with comparable TSR can differ substantially in step efficiency. Kimi-K2.5 and GPT-5.4 have similar Physical Overall TSR (9.2% vs. 6.6%), yet GPT-5.4 achieves higher SE (0.745 vs. 0.584), indicating heavier trial-and-error for Kimi-K2.5.
       </div>
       <div class="finding-item">
         <strong>Domain-specific strengths.</strong>
-        GPT-5 and Qwen-3.5-397B-A17B tie in Work &amp; Study (16.9%); Qwen-3.5 leads physical entertainment (13.2%); GPT-5 leads Travel (6.8%) and Social (34.8%); Gemini-3.1-Pro leads digital games (39.0% TSR).
+        GPT-5 and Qwen-3.5-397B-A17B tie in Work &amp; Study (16.9%); GPT-5 leads Travel (6.8%); Gemini-3.1-Pro achieves the highest scores on digital 3D games (39.0% TSR).
       </div>
       <div class="finding-item">
         <strong>Vision-only closed-loop evaluation.</strong>
@@ -644,7 +650,7 @@
   </section>
 
   <!-- Citation -->
-  <section id="citation" class="section">
+  <section class="section">
     <div class="container is-max-desktop">
       <h2 class="title is-3 has-text-centered">Citation</h2>
       <div class="content">
@@ -669,11 +675,25 @@
           <a href="https://github.com/TuringEyeTest/turingeyetest.github.io">TuringEyeTest Project Page</a>.
         </p>
         <p style="color:#64748b; font-size:0.85rem;">
-          Project page for <a href="https://spatial-world.github.io/">SpatialWorld</a>.
+          Project page for <a href="https://spatialworld.github.io">SpatialWorld</a>.
         </p>
       </div>
     </div>
   </footer>
+
+  <script>
+    document.querySelectorAll('#galleryTabs li').forEach(function (tab) {
+      tab.addEventListener('click', function () {
+        var target = tab.dataset.tab;
+        document.querySelectorAll('#galleryTabs li').forEach(function (t) {
+          t.classList.toggle('is-active', t === tab);
+        });
+        document.querySelectorAll('.gallery-panel').forEach(function (panel) {
+          panel.style.display = panel.dataset.panel === target ? 'block' : 'none';
+        });
+      });
+    });
+  </script>
 
 </body>
 
